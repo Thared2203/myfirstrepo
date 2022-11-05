@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "myfirstrepo";
+$username = "root";
 $password = "";
 $dbname = "Options";
 

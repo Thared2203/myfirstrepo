@@ -1,5 +1,9 @@
 <?php
+
+header('Location: users.php');
+
 include_once ("connection.php");
+
 switch($_POST["role"]){
 	case "Pupil":
 		$role=0;
@@ -23,6 +27,8 @@ $stmt->bindParam(':gender', $_POST["gender"]);
 $stmt->bindParam(':role', $role);
 $stmt->execute();
 $conn=null;
+
+
 echo $_POST["gender"]."<br>";
 echo $_POST["forename"]."<br>";
 echo $_POST["surname"]."<br>";

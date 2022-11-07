@@ -1,4 +1,3 @@
-subjects.php
 <html>
 <title>Subjects</title>
     

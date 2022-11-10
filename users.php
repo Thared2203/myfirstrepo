@@ -7,19 +7,7 @@
 </head>
 <body>
 
-<?php
 
-include_once('connection.php');
-
-$stmt = $conn->prepare("SELECT * FROM TblUsers");
-$stmt->execute();
-
-while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
-{
-echo($row["Forename"].' '.$row["Surname"]."<br>");
-}
-
-?>
 <form action="addusers.php" method = "post">
   First name:<input type="text" name="forename"><br>
   Last name:<input type="text" name="surname"><br>
@@ -38,6 +26,18 @@ echo($row["Forename"].' '.$row["Surname"]."<br>");
   <input type="radio" name="role" value="Admin"> Admin<br>
   <input type="submit" value="Add User">
 </form>
+<?php
 
+include_once('connection.php');
+
+$stmt = $conn->prepare("SELECT * FROM TblUsers");
+$stmt->execute();
+
+while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
+{
+echo($row["Forename"].' '.$row["Surname"]."<br>");
+}
+
+?>
 </body>
 </html>

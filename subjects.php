@@ -1,3 +1,4 @@
+
 <html>
 <title>Subjects</title>
     
@@ -10,7 +11,7 @@
   <input type="submit" value="Add Subject">
 </form>
 <?php
-    array_map("htmlspecialchars", $_POST)
+    array_map("htmlspecialchars", $_POST);
     
 	include_once('connection.php');
 	$stmt = $conn->prepare("SELECT * FROM TblSubjects");

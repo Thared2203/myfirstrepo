@@ -35,6 +35,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC))
 
 <form>
 <input type="submit" value="Add Class">
+
 </form>
 </select>
 
